@@ -10,4 +10,4 @@ There is no properly released versions so currently the latest commit is support
 
 ## Reporting a Vulnerability
 
-If you find a vulnerability, please report it through an issue and tag your issue with [security]
+If you find a vulnerability, please report it through an issue (by clicking open blank issue and provide us with as much info about the vulnerability as possible) and tag your issue with [security]
