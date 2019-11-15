@@ -1,0 +1,162 @@
+.rainbow {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(124deg, #ff6b6b, #e03131, #fcc419, #ffe066, #51cf66, #22b8cf, #5c7cfa, #cc5de8, #f06595);
+  background-size: 1200% 1200%;
+  animation: rainbow 20s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.startuppopup {
+  position: fixed;
+  width: 60%;
+  height: 40%;
+  left: calc(50% - 30%);
+  top: calc(50% - 20%);
+  background-color: #f1f3f5;
+  border-radius: 10px;
+}
+.startuppopup p {
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  top: calc(50% - 30px);
+  text-align: center;
+  position: absolute;
+  color: #ced4da;
+  user-select: none;
+}
+
+.expandanim {
+  width: 0px;
+  height: 0px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transition: 1s;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.choosegroup {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.choosegroup div {
+  width: 100%;
+  height: 100%;
+}
+.choosegroup div h1.title {
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+}
+.choosegroup div .choice {
+  width: 45%;
+  height: 45%;
+  border: #1971c2 solid 1px;
+  display: inline-block;
+  position: absolute;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 1%;
+  cursor: pointer;
+  transition: 0.1s;
+  background-color: #66d9e8;
+}
+.choosegroup div .choice h1 {
+  font-size: 25px;
+}
+.choosegroup div .choice p {
+  font-size: 15px;
+}
+.choosegroup div .choice:hover {
+  box-shadow: 10px 10px 10px #3bc9db;
+  margin-top: calc(4% - 10px);
+}
+.choosegroup div .choice[choice="1"] {
+  right: 1.5%;
+}
+.choosegroup div .choice[choice="0"] {
+  left: 1.5%;
+}
+
+.setuppopup {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  left: calc(50% - 25%);
+  top: calc(50% - 25%);
+  background-color: #99e9f2;
+  border-radius: 10px;
+}
+
+.loadcover {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  transition: 0.25s;
+  animation-duration: 0.25s;
+  opacity: 0;
+  pointer-events: none;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+.loadcover .ringload {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  position: absolute;
+  margin: auto;
+}
+.loadcover .doubleringload {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  position: absolute;
+  margin: auto;
+}
+.loadcover.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+.loadcover.ring .ringload {
+  opacity: 1;
+}
+.loadcover.double .doubleringload {
+  opacity: 1;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

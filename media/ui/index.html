@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Riggl Scholar</title>
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="content rainbow" mode="startup">
+        <div class="startuppopup">
+            <p>Starting</p>
+        </div>
+        <div class="expandanim"></div>
+    </div>
+    <div class="loadcover">
+        <i class="ringload"><svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid" class="lds-dual-ring" style="background: none;">
+                <circle cx="50" cy="50" ng-attr-r="{{config.radius}}" ng-attr-stroke-width="{{config.width}}"
+                    ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-dasharray="{{config.dasharray}}" fill="none"
+                    stroke-linecap="round" r="40" stroke-width="4" stroke="#15aabf"
+                    stroke-dasharray="62.83185307179586 62.83185307179586" transform="rotate(59.9926 50 50)">
+                    <animateTransform attributeName="transform" type="rotate" calcMode="linear"
+                        values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
+                    </animateTransform>
+                </circle>
+            </svg></i>
+        <i class="doubleringload"><svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-double-ring"
+                style="shape-rendering: auto; animation-play-state: running; animation-delay: 0s; background: none;">
+                <circle cx="50" cy="50" ng-attr-r="{{config.radius}}" ng-attr-stroke-width="{{config.width}}"
+                    ng-attr-stroke="{{config.c1}}" ng-attr-stroke-dasharray="{{config.dasharray}}" fill="none"
+                    stroke-linecap="round" r="40" stroke-width="4" stroke="#15aabf"
+                    stroke-dasharray="62.83185307179586 62.83185307179586"
+                    style="animation-play-state: running; animation-delay: 0s;" transform="rotate(10.8709 50 50)">
+                    <animateTransform attributeName="transform" type="rotate" calcMode="linear"
+                        values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
+                        style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+                </circle>
+                <circle cx="50" cy="50" ng-attr-r="{{config.radius2}}" ng-attr-stroke-width="{{config.width}}"
+                    ng-attr-stroke="{{config.c2}}" ng-attr-stroke-dasharray="{{config.dasharray2}}"
+                    ng-attr-stroke-dashoffset="{{config.dashoffset2}}" fill="none" stroke-linecap="round" r="35"
+                    stroke-width="4" stroke="#228be6" stroke-dasharray="54.97787143782138 54.97787143782138"
+                    stroke-dashoffset="54.97787143782138" style="animation-play-state: running; animation-delay: 0s;"
+                    transform="rotate(-10.8709 50 50)">
+                    <animateTransform attributeName="transform" type="rotate" calcMode="linear"
+                        values="0 50 50;-360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
+                        style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+                </circle>
+            </svg></i>
+    </div>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/compiled.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

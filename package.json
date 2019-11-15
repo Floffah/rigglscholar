@@ -1,0 +1,49 @@
+{
+  "name": "rigglscholar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "npx electron . --data=\"./start\"",
+    "dev": "concurrently npm:sass npm:babeldev",
+    "build": "npx build -p always",
+    "sass": "sass --watch media/sass:media/css --update",
+    "babeldev": "npx babel media/scripts/src -o media/scripts/compiled.js --source-maps --watch --source-root media/scripts/src --source-type module",
+    "babel": "npx babel media/scripts/src -o media/scripts/compiled.js --minified --compact true --source-maps --watch --source root media/scripts/src --source-type module"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Floffah/rigglscholar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Floffah/rigglscholar/issues"
+  },
+  "homepage": "https://github.com/Floffah/rigglscholar#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-core": "^6.26.3",
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0",
+    "electron-debug": "^3.0.1",
+    "electron-rebuild": "^1.8.6",
+    "get-google-fonts": "^1.2.0"
+  },
+  "dependencies": {
+    "clean-stack": "^2.2.0",
+    "custom-electron-titlebar": "^3.1.0",
+    "decamelize": "^3.2.0",
+    "electron-updater": "^4.2.0",
+    "got": "^9.6.0",
+    "humanize-duration": "^3.21.0",
+    "humanize-plus": "^1.8.2",
+    "humanize-string": "^2.1.0",
+    "lowdb": "^1.0.0",
+    "threads": "^1.0.0-beta.6"
+  }
+}

@@ -1,0 +1,42 @@
+.loadcover
+    display: block
+    height: 100%
+    width: 100%
+    position: fixed
+    left: 0px
+    top: 0px
+    transition: 0.25s
+    animation-duration: 0.25s
+    opacity: 0
+    pointer-events: none
+    background-color: white
+    text-align: center
+    margin: auto
+    .ringload
+        opacity: 0
+        width: 50px
+        height: 50px
+        left: calc(50% - 100px)
+        top: calc(50% - 100px)
+        position: absolute
+        margin: auto
+    .doubleringload
+        opacity: 0
+        width: 50px
+        height: 50px
+        left: calc(50% - 100px)
+        top: calc(50% - 100px)
+        position: absolute
+        margin: auto
+    &.show
+        display: block
+        opacity: 1
+        pointer-events: auto
+    &.ring
+        .ringload
+            //display: block
+            opacity: 1
+    &.double
+        .doubleringload
+            //display: block
+            opacity: 1
