@@ -10,8 +10,6 @@ This app is still being development but as I code it, i will push my changes. Fe
 
 In order to test this on your own machine, clone the repository and run `npm install` and then you should run `npx electron-rebuild` before running. If you want to change the styles while testing, run `npm run dev` and to test it run `npm start`.
 This repo does not include the fonts but the code currently is programmed to use Open Sans from Google Fonts and was downloaded via [get-google-fonts](https://npmjs.org/package/get-google-font)
-<<<<<<< HEAD
 
 The app has its own library it uses (which is compiled using babel and is part of the `npm run dev` command) but feel free to use it in your own projects as long as you give credit. It has a fully working "choose menu" (multiple choices kind of like the ones you get when you first open IntelliJ Idea). See scripts/main.js for an example.
-=======
->>>>>>> bd2d0cf678d2026f9c629ac781d1eb3220d5e1c8
+
