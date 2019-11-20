@@ -1,7 +1,7 @@
 # Riggl Scholar
 Modern study resources app for students.
 
-Please note, the app was made based on what Scottish students need in order to study so if there's anything it doesn't do but you need it to do, create a feature request issues.
+Please note, the app was made based on what Scottish students need in order to study so if there's anything it doesn't do but you need it to do, create a feature request issue.
 
 Since the app was made based on what Scottish students need in order to study, if you do not have a Glow Scotland account (ask your guidance teacher for one if you don't have one) then you will need to provide manual verification.
 
