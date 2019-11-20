@@ -65,3 +65,14 @@ media/fonts
 
 # jetbrains
 .idea/
+
+# electron-builder
+electron-builder.env
+dist/
+
+# vscode
+rigglscholar.code-workspace
+
+# massive files
+media/css/
+media/scss

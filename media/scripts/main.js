@@ -45,8 +45,6 @@ function postsetup() {
         $$.choosemenu.createchoice("No", "You will get access to everything as long as you verify you are a student."),
         "This cannot be changed later."));
 
-    console.log(group.getOutput());
-
     if (!settings.get("setup").value()) {
         $(".content").html("<div class=\"setuppopup\">" + group.getOutput() + "</div>");
     }
@@ -55,5 +53,9 @@ function postsetup() {
 
     group.done((inf) => {
         console.log(inf);
+        $$.loading.showhide(false, () => {
+            $(".content").html("");
+        });
+        settings.set("darkmode", inf[0][1] == 0 ? true : false).write();
     });
 }

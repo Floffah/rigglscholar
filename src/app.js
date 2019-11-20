@@ -4,7 +4,9 @@ let {
 } = require('electron'),
     path = require('path');
 
-require('electron-debug')();
+if(process.argv.includes("--dev")) {
+    require('electron-debug')();
+}
 
 app.on('ready', () => {
     let display = require('electron').screen.getPrimaryDisplay(),

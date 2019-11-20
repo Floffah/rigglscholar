@@ -73,7 +73,7 @@ var donenextregister;
 
 $$.choosemenu.register = (group) => {
     register = $(".choice").on("click", (event) => {
-        $(".choice").removeClass("chosen");
+        $(`.achoose[menuindex=${group._openchoice}] .choice`).removeClass("chosen");
         $(event.target).addClass("chosen");
         $(event.target).parent().attr("chosen", $(event.target).attr("choice"));
     });

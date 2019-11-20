@@ -4,19 +4,20 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "npx electron . --data=\"./start\"",
+    "test": "npx electron . --data=\"./start\" --dev",
     "dev": "concurrently npm:sass npm:babeldev",
-    "build": "npx build -p always",
+    "build": "npx electron-builder -p always",
     "sass": "sass --watch media/sass:media/css --update",
     "babeldev": "npx babel media/scripts/src -o media/scripts/compiled.js --source-maps --watch --source-root media/scripts/src --source-type module",
-    "babel": "npx babel media/scripts/src -o media/scripts/compiled.js --minified --compact true --source-maps --watch --source root media/scripts/src --source-type module"
+    "babel": "npx babel media/scripts/src -o media/scripts/compiled.js --minified --compact true --source-maps --watch --source root media/scripts/src --source-type module",
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Floffah/rigglscholar.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Floffah",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Floffah/rigglscholar/issues"
@@ -44,5 +45,22 @@
     "humanize-string": "^2.1.0",
     "lowdb": "^1.0.0",
     "threads": "^1.0.0-beta.6"
+  },
+  "build": {
+    "productName": "RigglScholar",
+    "copyright": "Copyright © year ${author}",
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "rigglscholar",
+        "owner": "floffah"
+      }
+    ]
   }
 }

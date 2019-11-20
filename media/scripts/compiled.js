@@ -115,7 +115,7 @@ var donenextregister;
 
 $$.choosemenu.register = function (group) {
   register = $(".choice").on("click", function (event) {
-    $(".choice").removeClass("chosen");
+    $(".achoose[menuindex=".concat(group._openchoice, "] .choice")).removeClass("chosen");
     $(event.target).addClass("chosen");
     $(event.target).parent().attr("chosen", $(event.target).attr("choice"));
   });
@@ -162,6 +162,25 @@ $$.loading.hidecover = function () {
   $(".loadcover").removeClass("show");
   $(".loadcover").removeClass("double");
   $(".loadcover").removeClass("ring");
+};
+
+$$.loading.showhide = function (_double2, half) {
+  if (_double2 === true) {
+    $(".loadcover").addClass("show");
+    $(".loadcover").addClass("double");
+  } else {
+    $(".loadcover").addClass("show");
+    $(".loadcover").addClass("ring");
+  }
+
+  setTimeout(function () {
+    half();
+  }, 100);
+  setTimeout(function () {
+    $(".loadcover").removeClass("show");
+    $(".loadcover").removeClass("double");
+    $(".loadcover").removeClass("ring");
+  }, 500);
 };
 
 //# sourceMappingURL=compiled.js.map
