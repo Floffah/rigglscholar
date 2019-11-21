@@ -74,4 +74,7 @@ dist/
 rigglscholar.code-workspace
 
 # massive files
-media/css/
+media/css
+
+# private info
+cfg/gh.json

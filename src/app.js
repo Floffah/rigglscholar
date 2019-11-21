@@ -1,8 +1,10 @@
 let {
     BrowserWindow,
-    app
+    app,
+    Menu
 } = require('electron'),
-    path = require('path');
+    path = require('path'),
+    events = require('./events');
 
 if(process.argv.includes("--dev")) {
     require('electron-debug')();
@@ -25,9 +27,22 @@ app.on('ready', () => {
         });
 
     win.loadURL(path.join(__dirname, "../media/ui", "index.html"));
-
+    require('./localapi');
     win.on('ready-to-show', () => {
         win.show();
+        win.setMenu(Menu.buildFromTemplate([
+            {
+                label: 'Window',
+                submenu: [
+                    {
+                        role: 'reload'
+                    },
+                    {
+                        role: 'forceReload'
+                    }
+                ]
+            }
+        ]));
         win.maximize();
     });
 });

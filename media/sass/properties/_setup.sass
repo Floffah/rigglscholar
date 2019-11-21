@@ -1,0 +1,51 @@
+.setup
+    text-align: center
+    overflow: auto
+    width: 60%
+    height: 60%
+    position: fixed
+    left: 20%
+    top: 20%
+    background-color: $oc-gray-2
+    border-radius: 10px
+    padding: 5px
+    h1
+        position: absolute
+        top: 0px
+        left: 0px
+        background-color: $oc-gray-4
+        padding: 10px
+        border-top-left-radius: 10px
+        border-bottom-right-radius: 10px
+    .ghlogincontainer
+        margin-top: 100px
+        position: relative
+    .ghlogincontainer .ghloginbtn
+        width: 170px
+        height: 70px
+        border: 2px solid $oc-gray-6
+        border-radius: 10px
+        font-size: 15px
+        padding: 10px
+        text-align: left
+        background-color: $oc-gray-9
+        color: $oc-gray-1
+        position: relative
+        user-select: none
+        cursor: pointer
+        &.center
+            left: calc(50% - 85px)
+        span
+            position: absolute
+            top: 22.5px
+            left: 10px
+        .ghlogo
+            height: 50px
+            position: absolute
+            bottom: 10px
+            right: 10px
+            border-radius: 5px
+            background-color: $oc-gray-1
+    .ghhelp
+        color: $oc-blue-7
+        cursor: pointer
