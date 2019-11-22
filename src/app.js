@@ -46,3 +46,5 @@ app.on('ready', () => {
         win.maximize();
     });
 });
+
+process.on('unhandledRejection', console.error);

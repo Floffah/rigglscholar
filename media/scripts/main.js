@@ -89,7 +89,6 @@ function postsetup() {
             maximizable: false,
             parent: getCurrentWindow(),
             modal: true,
-            closable: false,
         });
         loginwin.setMenu(null);
         loginwin.loadURL(`https://github.com/login/oauth/authorize?scope=user&client_id=${require('../../cfg/gh.json').clientid}`);
@@ -116,3 +115,5 @@ events.on('login', (inf) => {
     }
     $(".content").load("../ui/ui.html");
 });
+
+process.on('unhandledRejection', console.error);
