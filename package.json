@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Floffah/rigglscholar.git"
   },
   "keywords": [],
-  "author": "Floffah",
+  "author": "Floffah <therealfloffah@gmail.com> (http://riggl.net)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Floffah/rigglscholar/issues"
@@ -29,7 +29,7 @@
     "@babel/preset-env": "^7.7.1",
     "babel-core": "^6.26.3",
     "electron": "^7.1.1",
-    "electron-builder": "^22.1.0",
+    "electron-builder": "^21.2.0",
     "electron-debug": "^3.0.1",
     "electron-rebuild": "^1.8.6",
     "get-google-fonts": "^1.2.0"
@@ -56,9 +56,10 @@
         "portable"
       ]
     },
-    "linux" : {
+    "linux": {
       "target": [
-        "deb", "tar.gz"
+        "deb",
+        "tar.gz"
       ]
     },
     "publish": [
