@@ -56,6 +56,11 @@
         "portable"
       ]
     },
+    "linux" : {
+      "target": [
+        "dev", "tar.gz"
+      ]
+    },
     "publish": [
       {
         "provider": "github",
