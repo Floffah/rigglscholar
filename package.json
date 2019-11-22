@@ -1,6 +1,6 @@
 {
   "name": "rigglscholar",
-  "version": "pre-dev 0.0.1",
+  "version": "0.0.1",
   "description": "",
   "main": "src/app.js",
   "scripts": {
