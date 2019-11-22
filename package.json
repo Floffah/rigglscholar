@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx electron . --data=\"./start\" --dev",
     "dev": "concurrently npm:sass npm:babeldev",
-    "build": "npx electron-builder -p always",
+    "build": "npx electron-builder -p always -l -w",
     "sass": "sass --watch media/sass:media/css --update",
     "babeldev": "npx babel media/scripts/src -o media/scripts/compiled.js --source-maps --watch --source-root media/scripts/src --source-type module",
     "babel": "npx babel media/scripts/src -o media/scripts/compiled.js --minified --compact true --source-maps --watch --source root media/scripts/src --source-type module",
@@ -58,7 +58,7 @@
     },
     "linux" : {
       "target": [
-        "dev", "tar.gz"
+        "deb", "tar.gz"
       ]
     },
     "publish": [
