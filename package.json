@@ -1,6 +1,6 @@
 {
   "name": "rigglscholar",
-  "version": "1.0.0",
+  "version": "pre-dev 0.0.1",
   "description": "",
   "main": "src/app.js",
   "scripts": {
@@ -60,7 +60,7 @@
       {
         "provider": "github",
         "repo": "rigglscholar",
-        "owner": "floffah"
+        "owner": "Floffah"
       }
     ]
   }
