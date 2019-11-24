@@ -10,6 +10,12 @@ if(process.argv.includes("--dev")) {
     require('electron-debug')();
 }
 
+process.argv.forEach((arg) => {
+    if(arg.includes("--data")) {
+        app.setPath("userData", path.resolve(arg.replace("--data=", "")));
+    }
+});
+
 app.on('ready', () => {
     let display = require('electron').screen.getPrimaryDisplay(),
         win = new BrowserWindow({

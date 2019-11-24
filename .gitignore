@@ -78,3 +78,6 @@ media/css
 
 # private info
 cfg/gh.json
+
+# userData
+test/*

@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "npx electron . --data=\"./start\" --dev",
+    "test": "npx electron . --data=\"./test\" --dev",
     "dev": "concurrently npm:sass npm:babeldev",
     "build": "npx electron-builder -p always -l -w",
     "sass": "sass --watch media/sass:media/css --update",
@@ -58,8 +58,7 @@
     },
     "linux": {
       "target": [
-        "deb",
-        "tar.gz"
+        "tar.gz", "deb"
       ]
     },
     "publish": [

@@ -1,21 +1,23 @@
 let TB = require('custom-electron-titlebar'),
-    {Menu, shell, getCurrentWindow, BrowserWindow} = require('electron').remote,
+    {
+        Menu,
+        shell,
+        getCurrentWindow,
+        BrowserWindow
+    } = require('electron').remote,
     Remquire = require('electron').remote.require,
     titlebar = new TB.Titlebar({
         backgroundColor: TB.Color.fromHex("#74c0fc"),
-        menu: Menu.buildFromTemplate([
-            {
-                label: 'Window',
-                submenu: [
-                    {
-                        role: 'reload'
-                    },
-                    {
-                        role: 'forceReload'
-                    }
-                ]
-            }
-        ])
+        menu: Menu.buildFromTemplate([{
+            label: 'Window',
+            submenu: [{
+                    role: 'reload'
+                },
+                {
+                    role: 'forceReload'
+                }
+            ]
+        }])
     }),
     {
         app
@@ -63,7 +65,7 @@ function postsetup() {
 
     if (!settings.get("firstrun").value()) {
         $(".content").html("<div class=\"setuppopup\">" + group.getOutput() + "</div>");
-    } else if(!settings.get("setup").value()) {
+    } else if (!settings.get("setup").value()) {
         $(".content").load("../ui/setup.html", () => {
             $(".ghloginbtn").click(() => {
                 let loginwin = new BrowserWindow({
@@ -99,7 +101,23 @@ function postsetup() {
     group.done((inf) => {
         console.log(inf);
         $$.loading.showhide(false, () => {
-            $(".content").load("../ui/setup.html");
+            $(".content").load("../ui/setup.html", () => {
+                $(".ghloginbtn").click(() => {
+                    let loginwin = new BrowserWindow({
+                        height: 600,
+                        width: 500,
+                        resizable: false,
+                        maximizable: false,
+                        parent: getCurrentWindow(),
+                        modal: true
+                    });
+                    loginwin.setMenu(null);
+                    loginwin.loadURL(`https://github.com/login/oauth/authorize?scope=user&client_id=${require('../../cfg/gh.json').clientid}`);
+                });
+                $(".ghhelp").click(() => {
+                    shell.openExternal("https://github.com/Floffah/rigglscholar/wiki/Why-we-use-GitHub");
+                });
+            });
         });
         settings.set("darkmode", inf[0][1] == 0 ? true : false).write();
         settings.set("collegeoruni", inf[1][1] == 2 ? false : true).write();
@@ -110,7 +128,7 @@ function postsetup() {
 events.on('login', (inf) => {
     let data = JSON.parse(inf);
     $(".ghloginbtn").html(`<p>Logged in as <strong>${data.login}</strong></p>`);
-    if(!settings.get('setup').value()) {
+    if (!settings.get('setup').value()) {
         settings.set('setup', true).write();
     }
     $(".content").load("../ui/ui.html");
