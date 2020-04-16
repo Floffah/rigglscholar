@@ -1,7 +1,7 @@
 # Riggl Scholar
 Modern study resources app for students.
 
-Please note, because I am scottish, The app currently only has study resources for Scottish students (Nat 5, Higher, and Adv. Higher. I didn't do Nat 3/4 when I was in school so if you know how it works, hit me up). However, if you know the ins and outs of any other country's schooling system, please contact me on Discord at UnknownSloth#6791
+Please note, because I am scottish, The app currently only has study resources for Scottish students. However, if you know the ins and outs of any other country's schooling system, please contact me on Discord at Floffah#6791
 
 ## Info
 This app is still being developed but as I code it, i will push my changes. Feel free to have a look around while I develop it. I have also published some pre-beta versions in the [releases tab](https://github.com/Floffah/rigglscholar/releases). I will publish new pre-beta releases when I feel like I have reached a point in development where there is a significant change/update since the previous.
